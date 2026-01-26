@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 21:52:16 by iergin            #+#    #+#             */
-/*   Updated: 2026/01/10 22:14:07 by iergin           ###   ########.fr       */
+/*   Updated: 2026/01/26 14:25:48 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	len;
 	size_t	i;
 
-	len = 0;
-	while (src[len])
-		len++;
+	len = ft_strlen(src);
 	if (size == 0)
 		return (len);
 	i = 0;

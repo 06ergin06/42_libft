@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/10 22:28:55 by iergin            #+#    #+#             */
-/*   Updated: 2026/01/26 14:28:38 by iergin           ###   ########.fr       */
+/*   Created: 2026/01/26 15:15:06 by iergin            #+#    #+#             */
+/*   Updated: 2026/01/26 15:20:40 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+char	*strdup(const char *s)
 {
-	if (('A' <= c && c <= 'Z'))
+	char	*d;
+	size_t	len;
+	size_t	i;
+
+	len = ft_strlen(s);
+	d = (char *)malloc(sizeof(char) * (len + 1));
+	if (!d)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		c -= 32;
+		d[i] = s[i];
+		i++;
 	}
-	return (c);
+	d[i] = '\0';
+	return (d);
 }
