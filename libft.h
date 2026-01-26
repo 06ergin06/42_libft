@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 20:12:25 by iergin            #+#    #+#             */
-/*   Updated: 2026/01/26 17:39:42 by iergin           ###   ########.fr       */
+/*   Updated: 2026/01/26 22:41:12 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,6 @@ int		ft_toupper(int c);
 
 // Part 2
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 #endif
