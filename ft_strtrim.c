@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 17:31:40 by iergin            #+#    #+#             */
-/*   Updated: 2026/01/26 17:53:58 by iergin           ###   ########.fr       */
+/*   Updated: 2026/01/27 12:38:05 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 	char	*res;
+
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;

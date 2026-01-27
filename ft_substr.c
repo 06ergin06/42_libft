@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 16:32:11 by iergin            #+#    #+#             */
-/*   Updated: 2026/01/26 16:55:32 by iergin           ###   ########.fr       */
+/*   Updated: 2026/01/27 16:57:31 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	s_len = ft_strlen(s);
 	if (start >= s_len)
-		return ("");
+		return (ft_strdup(""));
 	if (len > s_len - start)
 		len = s_len - start;
 	d = (char *)malloc(sizeof(char) * (len + 1));
