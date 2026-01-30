@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 22:03:55 by iergin            #+#    #+#             */
-/*   Updated: 2026/01/27 12:36:16 by iergin           ###   ########.fr       */
+/*   Updated: 2026/01/29 16:47:30 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	res = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	res = (char **)ft_calloc((count_words(s, c) + 1), sizeof(char *));
 	if (!res)
 		return (NULL);
 	return (fill(s, c, res));

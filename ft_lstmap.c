@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:39:50 by iergin            #+#    #+#             */
-/*   Updated: 2026/01/27 16:03:03 by iergin           ###   ########.fr       */
+/*   Updated: 2026/01/29 18:33:00 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
-	t_list	*new_content;
+	void	*new_content;
 	t_list	*new_node;
 
 	if (!lst || !f || !del)
@@ -27,7 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_node = ft_lstnew(new_content);
 		if (!new_node)
 		{
-			del(new_node);
+			del(new_content);
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}

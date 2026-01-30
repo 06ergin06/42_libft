@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 12:38:46 by iergin            #+#    #+#             */
-/*   Updated: 2026/01/27 14:14:43 by iergin           ###   ########.fr       */
+/*   Updated: 2026/01/29 17:03:16 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,9 @@ char	*ft_itoa(int n)
 
 	nbr = n;
 	len = num_len(nbr);
-	s = (char *)malloc(sizeof(char) * (len + 1));
+	s = (char *)ft_calloc((len + 1), sizeof(char));
 	if (!s)
 		return (NULL);
-	s[len] = '\0';
 	if (nbr == 0)
 		s[0] = '0';
 	if (nbr < 0)
